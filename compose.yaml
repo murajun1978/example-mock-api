@@ -1,0 +1,10 @@
+services:
+  app:
+    image: node:21-bookworm-slim
+    working_dir: /app
+    entrypoint: ./entrypoint.sh
+    command: npm run dev
+    volumes:
+      - .:/app
+    ports:
+      - 4000:3000
